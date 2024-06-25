@@ -1,0 +1,227 @@
+@media screen and (min-width: 250px) and (max-width: 999px){
+    /* home */
+    .hero-section{
+        height: 150vh;
+    }
+    .hero-section .box .about{
+        width: 100%;
+        padding: 0px;
+    }
+    .hero-section .box h1{
+        font-size: var(--heading4);
+    }
+    .hero-section .box .sub-heading{
+        font-size: var(--parah);
+    }
+    .hero-section .box p{
+        font-size: 13.5px;
+        width:25rem;
+    }
+    .productPoints .one,
+    .productPoints .two,
+    .productPoints .three{
+        display: none;
+    }
+    .hero-section .homeBtn button{
+        width: 350px;
+        padding: 8px 20px 8px 20px;
+    }
+    .hero-section .homeBtn button .plan{
+        width: 140px;
+        padding: 5px 15px 5px 15px;
+    }
+    .image img{
+        height: auto;
+    }
+    .showReview{
+        padding: 3rem 1rem;
+    }
+    .showReview .parah .quotation{
+        display: none;
+    }
+    /* what we do */
+    .whatweDoContainer{
+        padding: 0rem 1rem 5.5rem 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .whatweDoContainer .titleSection .first{
+        flex-direction: column;
+        gap:10px;
+    }
+    .whatweDoContainer .titleSection .second{
+        display: none;
+    }
+    .whatweDoContainer .titleSection .content{
+        align-items: center;
+    }
+    .whatweDoContainer .titleSection .content h1{
+        width: 200px;
+    }
+    .whatweDoContainer .titleSection .content p{
+        width: 278px;
+        font-size: var(--parah);
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+    .whatweDoContainer .titleSection div img{
+        width: 30px;
+        height: 30px;
+    }
+    .whatweDoContainer .last{
+        text-align: center;
+        font-size: 12.5px;
+    }
+
+    /* security */
+    .securityContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .securityContainer .first_section{
+        padding: 1.8rem  2rem 1.8rem 2rem;
+    }
+
+    /* expenses container */
+    .expenseContainer .flexBox{
+        width: 100%;
+    }
+    .expenseContainer .last{
+        padding: 6.71px 10px 6.71px 10px;
+        gap: 6px;
+    }
+    /* expectation */
+    .expectationContainer .boxes{
+        display: grid;
+        grid-template-columns: repeat(2, 11rem);
+        gap: 1rem;
+    }
+    .expectationContainer .title_section .title{
+        align-items: flex-start;
+    }
+    .expectationContainer .boxes .box p{
+        text-align: center;
+        padding: 0rem;
+    }
+    .expectationContainer{
+        padding: 0rem 0rem 5.5rem 0rem;
+    }
+
+    /* Our members */
+    .memberContainer{
+        padding: 0rem 1rem 0rem 1rem;
+    }
+    .memberContainer .firstContainer{
+        margin-bottom: 4rem;
+    }
+    .memberContainer .firstContainer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .memberContainer .secondContainer{
+        flex-direction:column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+    .memberContainer .container img{
+        margin-bottom: 1rem;
+        width: 300px;
+        height: 350px;
+        box-shadow: 0.43rem 0.87rem 1.8rem 0px #0000001A;
+    }
+    .memberContainer .container .section{
+        width: 24rem;
+    }
+    .container .section .title_section{
+        text-align: center;
+    }
+    .memberContainer .container .section::before{
+        left: 7rem;
+    }
+    .memberContainer .guarantee-sec{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .memberContainer .middleContainer{
+        text-align: center;
+        padding: 0rem 2rem 4rem 2rem;
+    }
+    /* ------------ */
+    .memberContainer .secondContainer .section{
+        align-items: center;
+        width: 100%;
+    }
+    .memberContainer .secondContainer .section::before{
+        left: 8rem;
+    }
+    .memberContainer .secondContainer .section .heading{
+        align-items: center;
+        justify-content: center;
+    }
+    .memberContainer .secondContainer .section h1{
+        width: 20rem;
+    }
+    .memberContainer .secondContainer .section .prah{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .memberContainer .secondContainer .section .prah .readMore{
+        margin-top: 20px;
+    }
+    .memberContainer .secondContainer .section .prah p{
+        padding: 0rem 0rem 0.5rem 0rem;
+    }
+    .memberContainer .secondContainer .section .prah strong{
+        display: none;
+    }
+
+    /* affiliations */
+    .ratedSection{
+        width: 20rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .ratedContainer .affiliations{
+        width: 100%;
+        height: 350px;
+        overflow-x: scroll;
+    }
+    .ratedContainer .affiliations::-webkit-scrollbar{
+        display: none;
+    }
+    /* card container */
+    .cardContainer{
+        flex-direction: column;
+    }
+    .silver,
+    .gold,
+    .platinum{
+        width: 350px;
+        height: 37rem;
+    }
+    /* review */
+    .reviewContainer{
+        padding:  0rem 2rem  5.5rem 2rem;
+    }
+    .reviewContainer .title_section{
+        font-size: var(--heading5);
+        line-height: 2.1rem;
+        width: 18rem;
+    }
+    .reviewContainer .reviewCount img{
+        width: 3rem;
+        height: 1rem;
+    }
+    .reviewContainer .reviewCount p{
+        margin-right: 4rem;
+    }
+    .reviewContainer .reviewbyUser{
+        padding: 1rem 0rem 0rem 1.5rem;
+    }
+}
+

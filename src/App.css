@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --heading1: 2.986rem;
+    --heading2:2.488rem;
+    --heading3:2.074rem;
+    --heading4:1.728rem;
+    --heading5:1.44rem;
+    --heading6:1.2rem;
+    --parah:1rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+html{
+    scroll-behavior: smooth;
+}
+.home{
+    padding: 1rem;
+}
+button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* home */
+.hero-section{
+    background-image: url('./resources/hero.png');
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 3.5rem;
+    position: relative;
+    z-index: -1;
+}
+.hero-section .box{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-section .box .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+.hero-section .box h1{
+    font-weight: 700;
+    line-height: 30.76px;
+    letter-spacing: 0.02em;
+}
+.hero-section .box .sub-heading{
+    font-weight: 400;
+    line-height: 25px;
+}
+.hero-section .box p{
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+.hero-section .homeBtn button{
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23.46px;
+    border: 1px solid #FFFFFF;
+    box-shadow: none;
+    background: #00000033;
+    color: #FFFFFF;
+}
+.hero-section .homeBtn button .plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 51px;
+    background-color: #58AFFF;
+    border: none;
+}
+.hero-section .homeBtn button .plan .searchIcon{
+    font-size: 25px;
+}
+.image img{
+    width: 100%;
+    margin-bottom: 5.5rem;
+}
+.showReview{
+    background-color: #58AFFF;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 5.5rem;
+}
+.showReview .title{
+    text-align: center;
+    font-size: var(--heading5);
+    font-weight: 700;
+    line-height: 30px;
+}
+.showReview .parah .quotation{
+    font-size: var(--heading2);
+    font-weight: 400;
+    line-height: 30.67px;
+}
+.showReview .parah{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--parah);
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 719px){
+    .hero-section .box{
+        margin-top: 12.5rem;
+        padding: 0px;
+        gap: 2rem;
+    }
+}
+@media screen and (min-width: 719px){
+    .hero-section .box{
+        margin-top: 8rem;
+        padding: 0px;
+        gap: 2rem;
+    }
+}
+@media screen and (min-width: 340px) and (max-width: 639x){
+    .showReview .parah{
+        width: 22rem;
+    }
+}
+@media screen and (min-width: 640x){
+    .showReview .parah{
+        width: 25rem;
+    }
+}
+@media screen and (min-width: 1000px){
+    .hero-section{
+        height: 150vh;
+    }
+    .hero-section .box{
+        margin-top: 6rem;
+        padding: 50px 0px 110px 0px;
+        gap: 4rem;
+    }
+    .hero-section .box p{
+        font-size: 14px;
+    }
+    .hero-section .box .about{
+        max-width:62.5rem;
+        padding: 0px 77px 0px 77px;
+    }
+    .hero-section .box h1{
+        font-size: var(--heading1);
+        line-height: 40.76px;
+        letter-spacing: 0.02em;
+    }
+    .hero-section .box .sub-heading{
+        font-size: var(--heading5);
+        line-height: 48px;
+    }
+    .hero-section .box p{
+        width:650px;
+    }
+    .hero-section .homeBtn button{
+        width: 400px;
+        padding: 10px 35px 10px 35px;
+    }
+    .hero-section .homeBtn button .plan{
+        width: 140px;
+        padding: 10px 15px 10px 15px;
+    }
+    .image img{
+        height: 20rem;
+    }
+    .showReview{
+        padding: 3rem 10rem;
+    }
+    .showReview .parah{
+        width: 45rem;
+    }
+    .productPoints .one{
+        position: absolute;
+        top: 60vh;
+        left: 5.5vw;
+    }
+    .productPoints .two{
+        position: absolute;
+        top: 85vh;
+        left: 11vw;
+    }
+    .productPoints .three{
+        position: absolute;
+        top: 90vh;
+        right: 2vw;
+    }
+}

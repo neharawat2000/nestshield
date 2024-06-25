@@ -1,0 +1,167 @@
+/* card */
+:root{
+    --heading1: 2.986rem;
+    --heading2:2.488rem;
+    --heading3:2.074rem;
+    --heading4:1.728rem;
+    --heading5:1.44rem;
+    --heading6:1.2rem;
+    --parah:1rem;
+}
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    padding-bottom: 5.5rem;
+}
+.cardContainer .title{
+    font-size: var(--heading5);
+    font-weight: 600;
+    line-height: 28.13px;
+    text-align: center;
+    color: #4E4E4E;
+}
+.silver,
+.platinum,
+.gold{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px 20px 10px;
+    gap: 30px;
+    box-shadow: 7px 12px 30px 0px #0000001A;
+}
+
+
+.silver .about,
+.gold .about,
+.platinum .about{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 281.67px;
+    height: 117px;
+    gap: 5px;
+}
+.silver .about h6,
+.gold .about h6,
+.platinum .about h6{
+    font-size: var(--heading6);
+    font-weight: 700;
+    line-height: 34.1px;
+}
+.silver .about p,
+.gold .about p,
+.platinum .about p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 16.8px;
+    color:#666666;
+}
+.silver .about h6{
+    color: #828282;
+}
+.gold .about h6{
+    color: #C89616;
+}
+.platinum .about h6{
+    color: #58AFFF;
+}
+.silver{
+    border: 4px solid #00000045; 
+}
+.platinum{
+    height: auto;
+    border: 6px solid #58AFFF36;
+}
+.gold{
+    border: 4px solid #FFD76F;
+}
+.points{
+    width: 18rem;
+}
+.points li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: #333333;
+}
+.icon{
+    font-size: 2.18rem;
+    padding: 0px 15px 6px 0px;
+}
+.silver .icon{
+    color: #828282;
+}
+.platinum .icon{
+    color: #58AFFF;
+}
+.gold .icon{
+    color: #C89616;
+}
+button{
+    padding: 0.62rem 1.25rem 0.62rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 46px;
+    font-size: var(--parah);
+    font-weight: 700;
+    line-height: 18px;
+    box-shadow: 14px 10px 20px 0px #0000001A;
+}
+.silver button{
+    color: #454545;
+    border: 2px solid #C1C1C1;
+}
+.platinum button{
+    color: #58AFFF;
+    border: 2px solid #58AFFF;
+}
+.gold button{
+    color: #C3992B;
+    border: 2px solid #FFDCB7;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px){
+    .silver,
+    .gold{
+        width: 400px;
+        height: 37rem;
+    }
+    .platinum{
+        width: 410px;
+        height: 50rem;
+    }
+    .cardContainer .title{
+        display: none;
+    }
+    .cardContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        padding-bottom: 5.5rem;
+    }
+}
+@media screen and (min-width: 1101px){
+    .silver,
+    .gold{
+        width: 400px;
+        height: 37rem;
+    }
+    .platinum{
+        width: 420px;
+        height: 50rem;
+    }
+    .cardContainer .title{
+        display: none;
+    }
+}

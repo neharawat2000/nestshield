@@ -1,0 +1,152 @@
+:root{
+    --heading1: 2.986rem;
+    --heading2:2.488rem;
+    --heading3:2.074rem;
+    --heading4:1.728rem;
+    --heading5:1.44rem;
+    --heading6:1.2rem;
+    --parah:1rem;
+}
+
+/* what we do */
+
+.whatweDoContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 3.75rem 5.5rem 3.75rem;
+    gap:2rem;
+}
+.whatweDoContainer .titleSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.whatweDoContainer .titleSection .first,
+.whatweDoContainer .titleSection .second{
+    flex:1;
+}
+.whatweDoContainer .titleSection .second div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.whatweDoContainer .titleSection .second div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 300px;
+    border-top: 3px solid #58AFFF;
+}
+.whatweDoContainer .titleSection .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatweDoContainer .titleSection div img{
+    width: 60px;
+    height: 60px;
+}
+.whatweDoContainer .titleSection .content{
+    display: flex;
+    flex-direction: column;
+}
+.whatweDoContainer .titleSection .content h1{
+    font-size: var(--heading3);
+    font-weight: 300;
+    line-height: 30x;
+}
+.whatweDoContainer .titleSection .content h1 span{
+    color: #58AFFF;
+    font-weight: 700;
+}
+.whatweDoContainer .titleSection .content p{
+    width: auto;
+    font-size: var(--parah);
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+}
+.whatweDoContainer .boxSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.whatweDoContainer .boxSection .box{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.whatweDoContainer .boxSection .box img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+.whatweDoContainer .boxSection .box .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.whatweDoContainer .boxSection .box .content .content_title{
+    font-size: var(--heading6);
+    font-weight: 500;
+    text-align: center;
+    line-height: 25.54px;
+    color: #081323;
+}
+.whatweDoContainer .boxSection .box .content p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.46px;
+    color: #828282;
+    text-align: center;
+}
+.whatweDoContainer .last{
+    font-weight: 700;
+    line-height: 20.6px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+.whatweDoContainer .last span{
+    color: #58AFFF;
+}
+
+@media screen and (min-width: 340px) and (max-width: 639x){
+    .whatweDoContainer{
+        justify-content: center;
+        align-items: center;
+    }
+    .whatweDoContainer .boxSection .box{
+        width: 250px;
+    }
+    .whatweDoContainer .titleSection .content p{
+        width: 220px;
+    }
+}
+@media screen and (min-width: 640x){
+    .whatweDoContainer .titleSection .content p{
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .whatweDoContainer .titleSection .first{
+        gap: 30px;
+    }
+    .whatweDoContainer .last{
+        font-size: 16px;
+    }
+    .whatweDoContainer .boxSection .box{
+        width: 300px;
+    }
+}
+
+
+
