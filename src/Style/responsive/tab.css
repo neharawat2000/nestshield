@@ -1,7 +1,7 @@
 @media screen and (min-width: 250px) and (max-width: 999px){
     /* home */
     .hero-section{
-        height: 150vh;
+        height: 100vh;
     }
     .hero-section .box .about{
         width: 100%;
@@ -13,22 +13,19 @@
     .hero-section .box .sub-heading{
         font-size: var(--parah);
     }
-    .hero-section .box p{
-        font-size: 13.5px;
-        width:25rem;
-    }
     .productPoints .one,
     .productPoints .two,
     .productPoints .three{
         display: none;
     }
-    .hero-section .homeBtn button{
-        width: 350px;
-        padding: 8px 20px 8px 20px;
+    .hero-section .homeBtn{
+        width: 400px;
+        padding: 10px 15px 10px 15px;
     }
-    .hero-section .homeBtn button .plan{
-        width: 140px;
+    .hero-section .homeBtn .plan{
+        width: 250px;
         padding: 5px 15px 5px 15px;
+        background-color: #58AFFF;
     }
     .image img{
         height: auto;
@@ -225,3 +222,15 @@
     }
 }
 
+@media screen and (min-width: 650px) and (max-width: 999px){
+    .hero-section .box p{
+        font-size: 13.5px;
+        width:38rem;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 649px){
+    .hero-section .box p{
+        font-size: 13.5px;
+        width:25rem;
+    }
+}

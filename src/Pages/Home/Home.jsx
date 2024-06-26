@@ -20,56 +20,57 @@ export default function Home() {
     return(
         <>
             <Navbar/>
-                <div className="hero-section">
-                    <div className="productPoints">
-                        <img src={pointOne} alt="points" className="one" />
-                        <img src={pointTwo} alt="points" className="two" />
-                        <img src={pointThree} alt="points" className="three" />
-                    </div>
-                    <div className="box">
-                        <div className="about">
-                            <h1 className="title">Guardians of Your Home</h1>
-                            <h6 className="sub-heading">
-                            A Decade Strong in Shielding Dreams
-                            </h6>
-                            <p>
-                                Break free from the worry of unexpected breakdowns. With American Home Shield, take charge of your home, confident in the knowledge that we’ve got you covered. Your home, your rules.
-                            </p>
-                        </div>
-                        <div className="homeBtn">
-                            <button>
-                                Enter your Zip Code
-                                <button className="plan">
-                                    <IoMdSearch  className="searchIcon"/>
-                                    Find Plans</button>
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div> 
-                <WhatWeDo/>   
-                <HomeSecurity/>   
-                <Expenses/>
-                <div className="image">
-                    <img src={hero2} alt="image" />
+            <div className="hero-section">
+                <div className="productPoints">
+                    <img src={pointOne} alt="points" className="one" />
+                    <img src={pointTwo} alt="points" className="two" />
+                    <img src={pointThree} alt="points" className="three" />
                 </div>
-                <OurMembers/>
-                <div className="showReview">
-                    <div className="title">
-                        Our Customers Love Services that You Will Too!
-                    </div>
-                    <div className="parah">
-                        <p className="quotation">“</p>
+                <div className="box">
+                    <div className="about">
+                        <h1 className="title">Guardians of Your Home</h1>
+                        <h6 className="sub-heading">
+                        A Decade Strong in Shielding Dreams
+                        </h6>
                         <p>
-                            "We have had nothing but great experiences with all of the service providers and with
-                            NestShield. They truly exceed our expectations every time." - Korena
+                            Break free from the worry of unexpected breakdowns. With American Home Shield, take charge of your home, confident in the knowledge that we’ve got you covered. Your home, your rules.
                         </p>
                     </div>
+                    <div className="homeBtn">
+                        <input type="text" placeholder="Enter your Zip Code" />
+                        <button className="plan">
+                            <IoMdSearch className="searchIcon" />
+                            Find Plans
+                        </button>
+                    </div>
                 </div>
-                <Rated/>
-                <Cards/>
-                <Review/>
-                <Footer/>
+            </div> 
+            <WhatWeDo/>   
+            <HomeSecurity/>   
+            <Expenses/>
+            <div className="image">
+                <img src={hero2} alt="image" />
+            </div>
+            <OurMembers/>
+            <div className="showReview">
+                <div className="title">
+                    Our Customers Love Services that You Will Too!
+                </div>
+                <div className="parah">
+                    <p className="quotation">“</p>
+                    <p>
+                        "We have had nothing but great experiences with all of the service providers and with
+                        NestShield. They truly exceed our expectations every time." - Korena
+                    </p>
+                </div>
+            </div>
+            <Rated/>
+            <Cards/>
+            <Review/>
+            <Footer/>
+            <div style={{background:"red"}}>
+                <input type="text" />
+            </div>
         </>
     );
 }

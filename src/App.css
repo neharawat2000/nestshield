@@ -41,7 +41,6 @@ button{
     justify-content: flex-start;
     margin-bottom: 3.5rem;
     position: relative;
-    z-index: -1;
 }
 .hero-section .box{
     color: #FFFFFF;
@@ -69,7 +68,7 @@ button{
     line-height: 24px;
     text-align: center;
 }
-.hero-section .homeBtn button{
+.hero-section .homeBtn{
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
@@ -81,18 +80,24 @@ button{
     border: 1px solid #FFFFFF;
     box-shadow: none;
     background: #00000033;
-    color: #FFFFFF;
 }
-.hero-section .homeBtn button .plan{
+.hero-section .homeBtn input{
+    color: #FFFFFF;
+    background-color: transparent;
+    outline: none;
+    width: 400px;
+}
+.hero-section .homeBtn .plan{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     border-radius: 51px;
-    background-color: #58AFFF;
+    font-weight: 400;
+    line-height: 23.46px;
     border: none;
 }
-.hero-section .homeBtn button .plan .searchIcon{
+.hero-section .homeBtn .plan .searchIcon{
     font-size: 25px;
 }
 .image img{
@@ -132,7 +137,7 @@ button{
 
 @media screen and (max-width: 719px){
     .hero-section .box{
-        margin-top: 4.5rem;
+        margin-top: 7rem;
         padding: 0px;
         gap: 1.5rem;
     }
@@ -156,7 +161,7 @@ button{
 }
 @media screen and (min-width: 1000px){
     .hero-section{
-        height: 150vh;
+        height: 100vh;
     }
     .hero-section .box{
         margin-top: 6rem;
@@ -182,13 +187,14 @@ button{
     .hero-section .box p{
         width:650px;
     }
-    .hero-section .homeBtn button{
+    .hero-section .homeBtn{
         width: 400px;
-        padding: 10px 35px 10px 35px;
-    }
-    .hero-section .homeBtn button .plan{
-        width: 140px;
         padding: 10px 15px 10px 15px;
+    }
+    .hero-section .homeBtn .plan{
+        width: 250px;
+        padding: 5px 15px 5px 15px;
+        background-color: #58AFFF;
     }
     .image img{
         height: 20rem;
