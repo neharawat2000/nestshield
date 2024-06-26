@@ -68,9 +68,6 @@ export default function Home() {
             <Cards/>
             <Review/>
             <Footer/>
-            <div style={{background:"red"}}>
-                <input type="text" />
-            </div>
         </>
     );
 }
