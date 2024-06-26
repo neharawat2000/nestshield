@@ -144,7 +144,7 @@ button{
 }
 @media screen and (min-width: 719px){
     .hero-section .box{
-        margin-top: 8rem;
+        margin-top: 7rem;
         padding: 0px;
         gap: 1.5rem;
     }
@@ -210,17 +210,17 @@ button{
     }
     .productPoints .one{
         position: absolute;
-        top: 60vh;
+        top: 55vh;
         left: 5.5vw;
     }
     .productPoints .two{
         position: absolute;
-        top: 85vh;
-        left: 11vw;
+        top: 80vh;
+        left: 10vw;
     }
     .productPoints .three{
         position: absolute;
-        top: 90vh;
-        right: 2vw;
+        top: 80vh;
+        right: 6vw;
     }
 }
