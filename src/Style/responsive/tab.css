@@ -19,8 +19,8 @@
         display: none;
     }
     .hero-section .homeBtn{
-        width: 400px;
-        padding: 10px 15px 10px 15px;
+        width: 350px;
+        padding: 7px 10px;
     }
     .hero-section .homeBtn .plan{
         width: 250px;
