@@ -132,9 +132,9 @@ button{
 
 @media screen and (max-width: 719px){
     .hero-section .box{
-        margin-top: 12.5rem;
+        margin-top: 4.5rem;
         padding: 0px;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 @media screen and (min-width: 719px){
