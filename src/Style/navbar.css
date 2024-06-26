@@ -103,7 +103,7 @@
     .navbar{
         flex-direction: column;
         align-items: flex-start;
-        background: radial-gradient(180deg, #8f959f, #8690a1);
+        background-color: #8f959f;
     }
     .navbar .first .nav-bar{
         display: block;
