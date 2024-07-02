@@ -11,6 +11,7 @@ import electronic from "../../resources/electronic.png";
 import roof from "../../resources/roof.png";
 import coverage from "../../resources/coverage.png";
 import maintenance from "../../resources/maintenance.png";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export default function Expenses(){
     const expenses= [
@@ -76,61 +77,81 @@ export default function Expenses(){
 
     return(
         <>
-            <div className="expenseContainer">
-                <div className="title_section">
-                    <h2>Help control out-of-pocket expenses.</h2>
-                    <p>
-                        <span>Without a home warranty,</span>
-                        it can cost a lot to repair or replace the systems you rely on.
-                    </p>
+            <AnimationOnScroll 
+            animatePreScroll={false}
+            duration={0.5} 
+            initiallyVisible={false}
+            animateIn="animate__fadeInUp">
+                <div className="expenseContainer">
+                    <div className="title_section">
+                        <h2>Help control out-of-pocket expenses.</h2>
+                        <p>
+                            <span>Without a home warranty,</span>
+                            it can cost a lot to repair or replace the systems you rely on.
+                        </p>
+                    </div>
+                    <div className="second">
+                        <div className="boxes">
+                            {
+                                expenses.map((box, index)=>{
+                                    return(
+                                        <AnimationOnScroll 
+                                        animatePreScroll={false}
+                                        duration={1} 
+                                        initiallyVisible={false}
+                                        animateIn="animate__flipInX" key={index} className="box">
+                                            <img src={box.img} alt="" />
+                                            <p>{box.title}</p>
+                                            <div className="cost">
+                                                <p>{box.costDetail}</p>
+                                                <span>{box.cost}</span>
+                                            </div>
+                                        </AnimationOnScroll>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                    <div className="last">
+                        <img src={information} alt="icon" />
+                        Repair/replacement costs are the eightieth percentile of U.S. costs according to a nationwide survey of homeowners conducted in 2019 by ClearVantage for NestShield.
+                    </div>
                 </div>
-                <div className="second">
-                    <div className="boxes">
+            </AnimationOnScroll>
+
+            <AnimationOnScroll 
+            animatePreScroll={false}
+            duration={0.5} 
+            initiallyVisible={false}
+            animateIn="animate__fadeInUp">
+                <div className="expectationContainer">
+                    <div className="title_section">
+                        <div className="title">
+                            What’s included? 
+                            <span>Beyond Expectations.</span>
+                        </div>
+                        <p>
+                        Our home warranties provide coverage for components of <span>as many as 23 systems and appliances.</span>  You have the flexibility to <span>tailor your plan</span> by adding extra protection for items such as swimming pools, electronics, and more.
+                        </p>
+                    </div>
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={1} 
+                    initiallyVisible={false}
+                    animateIn="animate__fadeInUp" className="boxes">
                         {
-                            expenses.map((box, index)=>{
+                            expectation.map((box, index)=>{
                                 return(
                                     <div key={index} className="box">
-                                        <img src={box.img} alt="" />
+                                        <img src={box.img} alt="img" />
                                         <p>{box.title}</p>
-                                        <div className="cost">
-                                            <p>{box.costDetail}</p>
-                                            <span>{box.cost}</span>
-                                        </div>
                                     </div>
                                 );
                             })
                         }
-                    </div>
+                    </AnimationOnScroll>
                 </div>
-                <div className="last">
-                    <img src={information} alt="icon" />
-                    Repair/replacement costs are the eightieth percentile of U.S. costs according to a nationwide survey of homeowners conducted in 2019 by ClearVantage for NestShield.
-                </div>
-            </div>
-            <div className="expectationContainer">
-                <div className="title_section">
-                    <div className="title">
-                        What’s included? 
-                        <span>Beyond Expectations.</span>
-                    </div>
-                    <p>
-                    Our home warranties provide coverage for components of <span>as many as 23 systems and appliances.</span>  You have the flexibility to <span>tailor your plan</span> by adding extra protection for items such as swimming pools, electronics, and more.
-                    </p>
-                </div>
-                <div className="boxes">
-                    {
-                        expectation.map((box, index)=>{
-                            return(
-                                <div key={index} className="box">
-                                    <img src={box.img} alt="img" />
-                                    <p>{box.title}</p>
-                                </div>
-                            );
-                        })
-                    }
-                </div>
-                    
-            </div>
+            </AnimationOnScroll>
         </>
     );
 }

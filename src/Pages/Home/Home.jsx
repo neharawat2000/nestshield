@@ -10,7 +10,7 @@ import { Cards } from "../../Components/Card/Cards";
 import Review from "../../Components/Review/Review";
 import Footer from "../../Components/Footer/Footer";
 
-import hero2 from "../../resources/hero2.png";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import pointOne from "../../resources/pointOne.png";
 import pointTwo from "../../resources/pointTwo.png";
@@ -48,22 +48,26 @@ export default function Home() {
             <WhatWeDo/>   
             <HomeSecurity/>   
             <Expenses/>
-            <div className="image">
-                <img src={hero2} alt="image" />
-            </div>
             <OurMembers/>
-            <div className="showReview">
-                <div className="title">
-                    Our Customers Love Services that You Will Too!
+            <AnimationOnScroll 
+            animatePreScroll={false}
+            duration={0.5} 
+            initiallyVisible={false}    
+            animateIn="animate__fadeInUp">
+                <div className="reviewContainer"></div>
+                <div className="showReview">
+                    <div className="title">
+                        Our Customers Love Services that You Will Too!
+                    </div>
+                    <div className="parah">
+                        <p className="quotation">“</p>
+                        <p>
+                            "We have had nothing but great experiences with all of the service providers and with
+                            NestShield. They truly exceed our expectations every time." - Korena
+                        </p>
+                    </div>
                 </div>
-                <div className="parah">
-                    <p className="quotation">“</p>
-                    <p>
-                        "We have had nothing but great experiences with all of the service providers and with
-                        NestShield. They truly exceed our expectations every time." - Korena
-                    </p>
-                </div>
-            </div>
+            </AnimationOnScroll>
             <Rated/>
             <Cards/>
             <Review/>

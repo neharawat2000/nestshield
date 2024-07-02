@@ -4,6 +4,8 @@
     width: 100%;
     background-color: #58AFFF;
     margin-bottom: 5.5rem;
+    position: relative;
+    z-index:15;
 }
 .securityContainer .first_section{
     flex:1;

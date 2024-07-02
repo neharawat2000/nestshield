@@ -17,6 +17,9 @@
     align-items: center;
     padding: 5.5rem 0rem 5.5rem 0rem;
     gap: 2rem;
+    position: relative;
+    background-color: white;
+    z-index:19;
 }
 .ratedSection{
     display: flex;
@@ -48,6 +51,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1.25rem;
+    position: relative;
+    background-color: white;
+    z-index:19;
 }
 
 .ratedContainer .affiliations .box{

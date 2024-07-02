@@ -1,8 +1,5 @@
 @media screen and (min-width: 250px) and (max-width: 999px){
     /* home */
-    .hero-section{
-        height: 100vh;
-    }
     .hero-section .box .about{
         width: 100%;
         padding: 0px;
@@ -199,7 +196,15 @@
     .gold,
     .platinum{
         width: 350px;
-        height: 37rem;
+    }
+    .silver{
+        height: 32rem;
+    }
+    .gold{
+        height: 39rem;
+    }
+    .platinum{
+        height: 50rem;
     }
     /* review */
     .reviewContainer{

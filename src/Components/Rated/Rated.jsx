@@ -14,6 +14,9 @@ import topRank from "../../resources/topRank.png";
 import usnews from "../../resources/usnews.png";
 import usToday from "../../resources/usToday.png";
 
+
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 export default function Rated() {
 
     const affiliations=[
@@ -70,15 +73,23 @@ export default function Rated() {
     return(
         <>
             <div className="ratedContainer">
-                <div className="ratedSection">
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={0.5} 
+                initiallyVisible={false}
+                animateIn="animate__fadeInUp" className="ratedSection">
                     <h5>
                         The <span>#1 Highest Rated</span> Home Warranty In America!
                     </h5>
                     <p>
                         See Our Affiliations Below
                     </p>
-                </div>
-                <div className="affiliations">
+                </AnimationOnScroll>
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={0.8} 
+                initiallyVisible={false}
+                animateIn="animate__fadeInUp" className="affiliations">
                     {
                         affiliations.map((affiliation,index)=>{
                             return(
@@ -93,8 +104,7 @@ export default function Rated() {
                             );
                         })
                     }
-                    
-                </div>
+                </AnimationOnScroll>
             </div>
         </>
     );

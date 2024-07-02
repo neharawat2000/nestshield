@@ -15,6 +15,9 @@
     flex-direction: column;
     gap: 3.12rem;
     padding: 1rem 1rem 5.5rem 1rem;
+    position: relative;
+    background-color: white;
+    z-index:16;
 }
 .expenseContainer .title_section{
     display: flex;
@@ -113,6 +116,9 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    position: relative;
+    background-color: white;
+    z-index:16;
 }
 .expectationContainer .title_section{
     width: 80%;
@@ -168,9 +174,14 @@
     .expectationContainer .title_section .title{
         align-items: center;
     }
+    .expectationContainer .title_section p{
+        text-align: center;
+    }
     .expectationContainer .boxes{
         width: 100%;
         display: grid;
+        align-items: center;
+        justify-content: center;
         grid-template-columns: repeat(4, 13.1rem);
         gap: 1rem;
     }

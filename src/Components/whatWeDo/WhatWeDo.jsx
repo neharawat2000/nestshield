@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Style/whatWedo.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import charger from "../../resources/charger.png";
 import pros from "../../resources/pros.png";
 import roof from "../../resources/roof.png";
@@ -26,44 +27,62 @@ export default function WhatWeDo() {
     ];
 
     return(
-        <>
-            <div className="whatweDoContainer">
-                <div className="titleSection">
-                    <div className="first">
-                        <img src={home} alt="" />
-                        <div className="content">
-                            <h1>What <span>We Do</span></h1>
-                            <p>We provide holistic home security services to make sure you don’t have to worry about any of it at all.</p>
+        <>  
+            <AnimationOnScroll 
+            animatePreScroll={false}
+            duration={0.5} 
+            initiallyVisible={false}    
+            animateIn="animate__fadeInUp">
+                <div className="whatweDoContainer">
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.5} 
+                    initiallyVisible={false}    
+                    animateIn="animate__fadeInLeft"
+                    className="titleSection">
+                        <div className="first">
+                            <img src={home} alt="" />
+                            <div className="content">
+                                <h1>What <span>We Do</span></h1>
+                                <p>We provide holistic home security services to make sure you don’t have to worry about any of it at all.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="second">
-                        <div></div>
-                    </div>
-                    
-                </div>
-                <div className="boxSection">
-                    {
-                        services.map((service, index)=>{
-                            return(
-                                <div className="box">
-                                    <img src={service.img} alt="" />
-                                    <div className="content">
-                                        <div className="content_title">
-                                            {service.title}
+                        <div className="second">
+                            <div></div>
+                        </div>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.6} 
+                    initiallyVisible={false}    
+                    animateIn="animate__fadeInRight" className="boxSection">
+                        {
+                            services.map((service, index)=>{
+                                return(
+                                    <div className="box">
+                                        <img src={service.img} alt="" />
+                                        <div className="content">
+                                            <div className="content_title">
+                                                {service.title}
+                                            </div>
+                                            <p>
+                                                {service.parah}
+                                            </p>
                                         </div>
-                                        <p>
-                                            {service.parah}
-                                        </p>
                                     </div>
-                                </div>
-                            );
-                        })
-                    }
+                                );
+                            })
+                        }
+                    </AnimationOnScroll>
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.7} 
+                    initiallyVisible={false}    
+                    animateIn="animate__fadeInLeft" className="last">
+                        Be confident and in control with <span>NestShield.</span>
+                    </AnimationOnScroll>
                 </div>
-                <div className="last">
-                    Be confident and in control with <span>NestShield.</span>
-                </div>
-            </div>
+            </AnimationOnScroll>
         </>
     );
 }

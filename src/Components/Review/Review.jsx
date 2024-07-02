@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Style/review.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import stars from "../../resources/stars.png";
 import google from "../../resources/googleImg.png";
@@ -40,43 +41,53 @@ export default function Review(){
     ];
     return(
         <>
-            <div className="reviewContainer">
-                <h4 className="title_section">
-                    Why Customers <span>Trust</span> First Premier Home Warranty
-                </h4>
-                <div className="reviewCount">
-                    <p>459+ Reviews on</p>
-                    <img src={google} alt="google-logo" />
-                    <img src={trustpilot} alt="trustpilot-logo" />
-                    <img src={bbb} alt="bbb-logo" />
-                </div>
-                <div className="reviewbyUser">
-                    <div className="user">
-                        {
-                            reviewData.map((data, index)=>{
-                                return(
-                                    <div key={index} className="box">
-                                        <div className="name_section">
-                                            <div className="name">{data.name}</div>
-                                            <div className="date">{data.date}</div>
-                                        </div>
-                                        <p className="review">
-                                        {data.review}
-                                        </p>
-                                        <div className="rating">
-                                            <div className="posted">
-                                                <span>posted by</span>
-                                                <img src={data.postedBy} alt="posted by google" />
+            <AnimationOnScroll 
+            animatePreScroll={false}
+            duration={0.5} 
+            initiallyVisible={false}    
+            animateIn="animate__fadeInUp">
+                <div className="reviewContainer">
+                    <h4 className="title_section">
+                        Why Customers <span>Trust</span> First Premier Home Warranty
+                    </h4>
+                    <div className="reviewCount">
+                        <p>459+ Reviews on</p>
+                        <img src={google} alt="google-logo" />
+                        <img src={trustpilot} alt="trustpilot-logo" />
+                        <img src={bbb} alt="bbb-logo" />
+                    </div>
+                    <div className="reviewbyUser">
+                        <div className="user">
+                            {
+                                reviewData.map((data, index)=>{
+                                    return(
+                                        <AnimationOnScroll 
+                                        duration={4}
+                                        animateIn='animate__flipInY'
+                                        initiallyVisible={false}
+                                        key={index} className="box">
+                                            <div className="name_section">
+                                                <div className="name">{data.name}</div>
+                                                <div className="date">{data.date}</div>
                                             </div>
-                                            <img src={data.ratings} alt="ratings" />
-                                        </div>
-                                    </div>
-                                );
-                            })
-                        }
+                                            <p className="review">
+                                            {data.review}
+                                            </p>
+                                            <div className="rating">
+                                                <div className="posted">
+                                                    <span>posted by</span>
+                                                    <img src={data.postedBy} alt="posted by google" />
+                                                </div>
+                                                <img src={data.ratings} alt="ratings" />
+                                            </div>
+                                        </AnimationOnScroll>
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
+            </AnimationOnScroll>
         </>
     );
 }

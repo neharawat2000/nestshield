@@ -126,3 +126,9 @@
         padding: 1rem 0rem 0rem 0rem;
     }
 }
+@media screen and (min-width: 1460px){
+    .reviewContainer .reviewbyUser{
+        align-items: center;
+        justify-content: center;
+    }
+}

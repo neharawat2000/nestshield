@@ -1,5 +1,6 @@
 import React from "react";
 import "../../Style/member.css"
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import member from "../../resources/member.png"
 import bag_icon from "../../resources/bag.png"
@@ -10,8 +11,18 @@ export default function OurMembers(params) {
         <>
             <div className="memberContainer">
                 <div className="firstContainer container">
-                    <img src={member} alt="image" />
-                    <div className="section">
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.5} 
+                    initiallyVisible={false}    
+                    animateIn="animate__fadeInLeft">
+                        <img src={member} alt="image" />
+                    </AnimationOnScroll>
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.5} 
+                    initiallyVisible={false}    
+                    animateIn="animate__fadeInRight" className="section">
                         <div className="title_section">
                             <h1>Our members <span>get even more</span> </h1>
                             <div className="prah">
@@ -40,13 +51,17 @@ export default function OurMembers(params) {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
                 <div className="middleContainer">
                     Repair/replacement costs are the eightieth percentile of U.S. costs according to a nationwide survey of homeowners conducted in 2019 by ClearVantage for NestShield.
                 </div>
                 <div className="secondContainer container">
-                    <div className="section">
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.5} 
+                    initiallyVisible={false}
+                    animateIn="animate__fadeInLeft" className="section">
                         <div className="title_section">
                             <div className="heading">
                                  <h1>What is a <span>home warranty?</span> </h1>
@@ -69,10 +84,15 @@ export default function OurMembers(params) {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <img src={warranty} alt="image" />
+                    </AnimationOnScroll>
+                    <AnimationOnScroll 
+                    animatePreScroll={false}
+                    duration={0.5} 
+                    initiallyVisible={false}
+                    animateIn="animate__fadeInRight">
+                        <img src={warranty} alt="image" />
+                    </AnimationOnScroll>
                 </div>  
-
             </div>
         </>
     );

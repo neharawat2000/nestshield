@@ -1,5 +1,7 @@
 import React from "react";
 import "../../Style/card.css"
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 
 import { FaCheck } from "react-icons/fa6";
 const silverPoints=[
@@ -91,10 +93,18 @@ export function Cards() {
     return(
         <>
             <div className="cardContainer">
-                <div className="title">
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={0.5} 
+                initiallyVisible={true}
+                animateIn="animate__fadeInUp" className="title">
                     Our Plans
-                </div>
-                <div className="silver">
+                </AnimationOnScroll>
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={0.6} 
+                initiallyVisible={true}
+                animateIn="animate__fadeInLeft" className="silver">
                     <div className="about">
                         <h6>NestSilver</h6>
                         <p>
@@ -111,9 +121,13 @@ export function Cards() {
                         }
                     </ul>
                     <button>Learn More</button>
-                </div>
+                </AnimationOnScroll>
                 
-                <div className="platinum">
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={1} 
+                initiallyVisible={true}
+                animateIn="animate__zoomIn" className="platinum">
                     <div className="about">
                         <h6>NestPlatinum</h6>
                         <p>
@@ -130,9 +144,13 @@ export function Cards() {
                         }
                     </ul>
                     <button>Learn More</button>
-                </div>
+                </AnimationOnScroll>
 
-                <div className="gold">
+                <AnimationOnScroll 
+                animatePreScroll={false}
+                duration={0.6} 
+                initiallyVisible={true}
+                animateIn="animate__fadeInRight" className="gold">
                     <div className="about">
                         <h6>NestGold</h6>
                         <p>
@@ -149,7 +167,7 @@ export function Cards() {
                         }
                     </ul>
                     <button>Learn More</button>
-                </div>
+                </AnimationOnScroll>
             </div>
         </>
     );

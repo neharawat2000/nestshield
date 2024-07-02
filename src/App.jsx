@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Style/responsive/tab.css';
 import './Style/responsive/smallDevice.css';
+import "animate.css/animate.min.css";
 
 import Home from './Pages/Home/Home';
 import HomeWarranty from './Pages/Home_Warranty/HomeWarranty';
