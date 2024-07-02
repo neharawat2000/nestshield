@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../Style/member.css"
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
@@ -7,6 +7,13 @@ import bag_icon from "../../resources/bag.png"
 import warranty from "../../resources/warranty.png"
 
 export default function OurMembers(params) {
+    const [isShown, setIsShown] = useState(false);
+    const [buttonVisible, setButtonVisible] = useState(true);
+
+    const handleClick = () => {
+        setIsShown(!isShown);
+        setButtonVisible(false);
+    };
     return(
         <>
             <div className="memberContainer">
@@ -70,18 +77,18 @@ export default function OurMembers(params) {
                                 <p>
                                     A home warranty covers (or helps pay) the costs for repairing or replacing systems and appliances when they stop working. The service contract for a home warranty is one year. Home warranties are meant to complement your homeowner’s insurance to cover things that insurance doesn’t, such as improper maintenance and normal wear- and-tear.
                                 </p>
-                                <button className="readMore">
-                                    READ MORE
-                                </button>
-                                <p>
-                                    <strong>
-                                    A home warranty from NestShield offers even more
-                                    benefits than a typical home warranty. Members enjoy
-                                    perks such as discounts on new appliances and services
-                                    like pre-season HVAC maintenance, tech set-up and
-                                    installation, and more.
-                                </strong>
-                                </p>
+                                {isShown && (
+                                    <p>
+                                        <strong  className={isShown ? "visible" : ""}>
+                                            A home warranty from NestShield offers even more benefits than a typical home warranty. Members enjoy perks such as discounts on new appliances and services like pre-season HVAC maintenance, tech set-up and installation, and more.
+                                        </strong>
+                                    </p>
+                                )}
+                                {buttonVisible && (
+                                    <button className="readMore" onClick={handleClick}>
+                                        READ MORE
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </AnimationOnScroll>
